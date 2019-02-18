@@ -1,7 +1,6 @@
 /***********************************************************************************
-* @main.h
-* @This header file includes all the function header files used in main.c
+* @help.h
+* @This header file contains the function declaration used in help.c
 * @authors Amreeta Sengupta & Ridhi Shah
 ************************************************************************************/
-#include "help.h"
-#include "exit.h"
+int Help();
