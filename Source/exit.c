@@ -6,9 +6,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../Include/exit.h"
+#include "../Include/free.h"
+#include "../Include/allocate.h"
 int Exit()
 {
-
+free(mem_address);
 printf("exiting...\nBye!!\n");
 exit(0);
 return 0;

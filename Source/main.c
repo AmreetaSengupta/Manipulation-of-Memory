@@ -8,7 +8,10 @@
 #include "../Include/main.h"
 #include "../Include/help.h"
 #include "../Include/exit.h"
-
+#include "../Include/allocate.h"
+#include "../Include/free.h"
+#include "../Include/write.h"
+#include "../Include/invert.h"
 struct table 
 	{
 		char *inp;
@@ -18,7 +21,7 @@ struct table
 	
 void main()
 {   
-	struct table op[] = {{"Help",&Help},{"Exit",&Exit}};
+	struct table op[] = {{"Help",&Help},{"Exit",&Exit},{"Allocate",&allocate},{"Free",&free_mem},{"Write",&write},{"Invert",&invert}};
 	char input[30];
 	int i;
 	printf("Welcome! \nPress Help for function information and Press Exit to Quit\n");
@@ -28,7 +31,7 @@ void main()
 		
 		scanf("%s",input);
 		int err=1;
-		for (i=0; i<2; i++)
+		for (i=0; i<6; i++)
 		  
 			{
 				if(strcmp (input, op[i].inp) == 0)
