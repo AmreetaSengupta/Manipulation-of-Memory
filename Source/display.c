@@ -1,11 +1,8 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdint.h>
+#include <stdio.h>
+#include <stdint.h>
 #include "../Include/allocate.h"
-#include "../Include/write.h"
 
-
-int write()
+int display()
 {
 uint64_t wr_address,offset_address;
 uint32_t data;
@@ -13,7 +10,7 @@ int i,j,k;
 
 char ans;
 int offset;
-if(mem_address==NULL)
+	if(mem_address==NULL)
 {
 	printf("Memory is not allocated! Use the command Allocate \n");
 }
@@ -40,9 +37,7 @@ if(ans == 'a' || ans =='A')
 		if(((uint32_t*)wr_address>=mem_address&&(uint32_t*)wr_address<(mem_address+num_words))&&((uint32_t*)wr_address == (mem_address+i)))
 			{
 				flag1=0;
-				printf("enter data\n");
-				scanf("%d",&data);
-				*(mem_address+i)=data;
+				
 				printf("data at %p = 0x%x\n",(mem_address+i),*(mem_address+i));
 			}
 	
@@ -64,9 +59,8 @@ else if(ans=='o'||ans=='O')
 			if(((uint32_t*)offset_address>=mem_address && (uint32_t*)offset_address<(mem_address+num_words)) && ((uint32_t*)offset_address == (mem_address+i)))
 				{
 					flag2=0;
-					printf("enter data\n");
-					scanf("%d",&data);
-					*(mem_address+i)=data;
+				
+					printf("data at %p = 0x%x\n",(mem_address+i),*(mem_address+i));
 					
 				}
 		}

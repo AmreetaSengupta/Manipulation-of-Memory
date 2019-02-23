@@ -1,7 +1,7 @@
-memfun : main.o help.o exit.o allocate.o free.o write.o invert.o ../Include/main.h ../Include/help.h ../Include/allocate.h ../Include/exit.h ../Include/free.h ../Include/write.h ../Include/invert.h
-		gcc -o memfun main.o help.o allocate.o free.o exit.o write.o invert.o
+memfun : main.o help.o exit.o allocate.o free.o write.o invert.o display.o ../Include/main.h ../Include/help.h ../Include/allocate.h ../Include/exit.h ../Include/free.h ../Include/write.h ../Include/invert.h  ../Include/display.h 
+		gcc -o memfun main.o help.o allocate.o free.o exit.o write.o invert.o display.o
 
-main.o : main.c ../Include/main.h ../Include/help.h  ../Include/allocate.h ../Include/exit.h ../Include/free.h ../Include/write.h ../Include/invert.h
+main.o : main.c ../Include/main.h ../Include/help.h  ../Include/allocate.h ../Include/exit.h ../Include/free.h ../Include/write.h ../Include/invert.h  ../Include/display.h 
 	gcc -c main.c
 
 help.o: help.c ../Include/help.h
@@ -18,6 +18,9 @@ write.o: write.c ../Include/write.h ../Include/allocate.h
 	
 invert.o: invert.c ../Include/invert.h ../Include/allocate.h
 	gcc -c invert.c
+	
+display.o: display.c ../Include/display.h ../Include/allocate.h
+	gcc -c display.c
 	
 exit.o: exit.c ../Include/exit.h
 	gcc -c exit.c

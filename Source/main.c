@@ -12,6 +12,8 @@
 #include "../Include/free.h"
 #include "../Include/write.h"
 #include "../Include/invert.h"
+#include "../Include/display.h"
+
 struct table 
 	{
 		char *inp;
@@ -21,7 +23,7 @@ struct table
 	
 void main()
 {   
-	struct table op[] = {{"Help",&Help},{"Exit",&Exit},{"Allocate",&allocate},{"Free",&free_mem},{"Write",&write},{"Invert",&invert}};
+	struct table op[] = {{"Help",&Help},{"Exit",&Exit},{"Allocate",&allocate},{"Free",&free_mem},{"Write",&write},{"Invert",&invert},{"Display",&display}};
 	char input[30];
 	int i;
 	printf("Welcome! \nPress Help for function information and Press Exit to Quit\n");
@@ -31,7 +33,7 @@ void main()
 		
 		scanf("%s",input);
 		int err=1;
-		for (i=0; i<6; i++)
+		for (i=0; i<7; i++)
 		  
 			{
 				if(strcmp (input, op[i].inp) == 0)
