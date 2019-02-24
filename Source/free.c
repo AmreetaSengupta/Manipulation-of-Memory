@@ -1,3 +1,8 @@
+/***********************************************************************************
+* @allocate.c
+* @This file frees the memory according to the user input.
+* @author Amreeta Sengupta & Ridhi Shah
+************************************************************************************/
 #include<stdlib.h>
 #include<stdio.h>
 #include "../Include/free.h"
@@ -6,7 +11,7 @@ int free_mem()
 {
 	free(mem_address);
 	printf("MEMORY FREED!");
-	printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n");	
+	printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n>>");	
 	return 0;
 }
 
