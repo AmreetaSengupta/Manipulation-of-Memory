@@ -24,3 +24,6 @@ display.o: display.c ../Include/display.h ../Include/allocate.h
 	
 exit.o: exit.c ../Include/exit.h
 	gcc -c exit.c
+
+test: memfun test.txt
+		./memfun <test.txt
