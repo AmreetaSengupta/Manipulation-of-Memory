@@ -15,7 +15,7 @@ uint64_t wr_address,offset_address;
 uint32_t data;
 int i,j,k;
 char ans;
-int offset;
+int offset; 
 	
 if(mem_address==NULL)	 //checking if memory is allocated 
 	{
