@@ -27,3 +27,6 @@ exit.o: exit.c ../Include/exit.h
 
 test: memfun test.txt
 		./memfun <test.txt
+
+clean : 	
+	rm memfun main.o help.o exit.o allocate.o free.o write.o invert.o display.o

@@ -1,6 +1,7 @@
 /***********************************************************************************
 * @help.c
 * @This file displays the entire help menu with a description of what each function does.
+* @Tools used : GCC & GNU make
 * @author Amreeta Sengupta & Ridhi Shah
 ************************************************************************************/
 #include<stdio.h>

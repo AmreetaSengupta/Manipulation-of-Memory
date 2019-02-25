@@ -2,6 +2,7 @@
 * @main.c
 * @This file contains main body of the code which includes the logic to call a function using     
 * function pointers depending upon the input given by the user
+* @Tools used : GCC & GNU make
 * @authors Amreeta Sengupta & Ridhi Shah
 ************************************************************************************/
 #include <stdio.h>
@@ -24,7 +25,7 @@ struct table
 	
 void main()
 {   
-	struct table op[] = {{"Help",&Help},{"Exit",&Exit},{"Allocate",&allocate},{"Free",&free_mem},{"Write",&write},{"Invert",&invert},{"Display",&display}};
+	struct table op[] = {{"Help",&Help},{"Exit",&Exit},{"Allocate",&allocate},{"Free",&free_mem},{"Write",&write},{"Invert",&invert},{"Display",&display}}; //A structure that acts as a lookup table for all the funcions
 	char input[30];
 	int i;
 	printf("Welcome! \nPress Help for function information and Press Exit to Quit\n>>");
@@ -32,12 +33,12 @@ void main()
 	{	
 		
 		
-		scanf("%s",input);
+		scanf("%s",input); //taking the input string from user for the function to be performed
 		int err=1;
-		for (i=0; i<7; i++)
+		for (i=0; i<7; i++) 
 		  
 			{
-				if(strcmp (input, op[i].inp) == 0)
+				if(strcmp (input, op[i].inp) == 0) //comapring the input and calling the appropriate function from the lookup table
 					{
 						err=0;
 						(*op[i].func)();
@@ -47,7 +48,7 @@ void main()
 			}
 		if(err==1)
 		{
-			printf("Invalid option! Enter again!\n");
+			printf("Invalid option! Enter again!\n"); //if invalid string is entered ask user to enter again
 		}
 		
 	}
