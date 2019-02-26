@@ -13,9 +13,16 @@ int allocate()
 {
 
 	
-		printf("Enter the number of 32 bit word to be allocated\n>>");
+		l1: printf("Enter the number of 32 bit word to be allocated\n>>");
 		scanf("%d",&num_words);
+		if(num_words == 0)
+		{
+			printf("Zero size entered...!!!\n");
+			goto l1;
+		}
+		
 		mem_address=(uint32_t *)malloc(num_words*sizeof(int));	// Allocating 32 bit words according to the number specified by user
+		
 		if(mem_address!=NULL)
 		{
 		printf("MEMORY ALLOCATED!! \nStarting adrress of the memory block is %p\n",mem_address);

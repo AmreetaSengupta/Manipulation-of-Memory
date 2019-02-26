@@ -39,7 +39,7 @@ if(ans == 'a' || ans =='A')
 	label1: printf("Enter the address\n>>"); // taking the address input from user
 	scanf("%lx",&wr_address);
 	int flag1=1;
-
+	
 	for (i=0; i<num_words;i++)
 	{
 		if(((uint32_t*)wr_address>=mem_address&&(uint32_t*)wr_address<(mem_address+num_words))&&((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
