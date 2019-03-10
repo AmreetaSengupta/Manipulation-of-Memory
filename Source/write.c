@@ -42,7 +42,7 @@ if(ans == 'a' || ans =='A')
 	
 	for (i=0; i<num_words;i++)
 	{
-		if(((uint32_t*)wr_address>=mem_address&&(uint32_t*)wr_address<(mem_address+num_words))&&((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
+		if(((uint32_t*)wr_address>=mem_address && (uint32_t*)wr_address<(mem_address+num_words)) && ((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
 			{
 				flag1=0;
 				printf("Enter the data\n>>");			// taking the data to be written from the user

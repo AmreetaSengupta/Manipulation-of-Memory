@@ -12,6 +12,7 @@
 int free_mem()
 {
 	free(mem_address); // using free() function to release the allocated memory
+	mem_address = NULL;
 	printf("MEMORY FREED!");
 	printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n>>");	
 	return 0;
