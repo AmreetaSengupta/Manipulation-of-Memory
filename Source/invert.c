@@ -128,14 +128,14 @@ int invert()
 				if(((uint32_t*)wr_address>=mem_address&&(uint32_t*)wr_address<(mem_address+num_words))&& ((wr_address-(uint64_t)mem_address)%4 ==0))//((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
 				{
 					flag1=0;
-					if((mem_address+num_words)>(uint32_t*)(wr_address+(size<<2)))
+					if(((mem_address+num_words)>=(uint32_t*)(wr_address+(size<<2))) && (size!=0))
 					{
 						#ifndef __linux__
 						SysTick_Config(16000000);
 						#else
 						clock_t start = clock();
 						#endif
-						for(int s=0; s<=size; s++)
+						for(int s=0; s<size; s++)
 						{
 							#ifndef __linux__
 							PRINTF("Data at %p = 0x%x before inverting\n\r",(mem_address+s),*(mem_address+s));
@@ -243,7 +243,7 @@ int invert()
 				{
 
 					flag2=0;
-					if((mem_address+num_words)>(uint32_t*)(offset_address+(size<<2)))
+					if(((mem_address+num_words)>=(uint32_t*)(offset_address+(size<<2))) && (size != 0))
 					{
 						#ifndef __linux__
 						SysTick_Config(16000000);
@@ -251,7 +251,7 @@ int invert()
 						clock_t start = clock();
 						#endif
 
-						for(int s=0; s<=size; s++)
+						for(int s=0; s<size; s++)
 						{
 							#ifndef __linux__
 							PRINTF("Data at %p = 0x%x before inverting\n\r",(mem_address+s),*(mem_address+s));

@@ -127,7 +127,7 @@ if(ans == 'a' || ans =='A')
 		if(((uint32_t*)wr_address>=mem_address && (uint32_t*)wr_address<(mem_address+num_words)) && ((wr_address-(uint64_t)mem_address)%4 ==0))//((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
 			{
 
-				if((mem_address+num_words)>(uint32_t*)(wr_address+(size<<2)))
+				if(((mem_address+num_words)>=(uint32_t*)(wr_address+(size<<2))) && (size!=0))
 				{
 					#ifndef __linux__
 					PRINTF("Enter the seed value\n\r>>");
@@ -152,7 +152,7 @@ if(ans == 'a' || ans =='A')
 					#endif
 
 					rand_num = data;
-					for(int s=0; s<=size; s++)
+					for(int s=0; s<size; s++)
 					{
 						rand_num = random_generator(rand_num);
 
@@ -266,7 +266,7 @@ else if(ans=='o'||ans=='O')
 		if(((uint32_t*)offset_address>=mem_address && (uint32_t*)offset_address<(mem_address+num_words)) && ((offset_address-(uint64_t)mem_address)%4 ==0))//((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
 			{
 
-				if((mem_address+num_words)> (uint32_t*)(offset_address+(size<<2)))
+				if(((mem_address+num_words)>=(uint32_t*)(offset_address+(size<<2))) && (size != 0))
 				{
 					#ifndef __linux__
 					PRINTF("Enter the seed value\n\r>>");
@@ -292,7 +292,7 @@ else if(ans=='o'||ans=='O')
 					#endif
 
 					rand_num = data;
-					for(int s=0; s<=size; s++)
+					for(int s=0; s<size; s++)
 					{
 						rand_num = random_generator(rand_num);
 						*((uint32_t*)offset_address+s)= rand_num;  				//writing data to the memory address specified.

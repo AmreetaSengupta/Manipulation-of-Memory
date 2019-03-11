@@ -129,7 +129,7 @@ if(ans == 'a' || ans =='A')
 		if(((uint32_t*)rd_address>=mem_address && (uint32_t*)rd_address<(mem_address+num_words)) && ((rd_address-(uint64_t)mem_address)%4 ==0))//((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
 			{
 
-				if((mem_address+num_words)>(uint32_t*)(rd_address+(size<<2)))
+				if(((mem_address+num_words)>=(uint32_t*)(rd_address+(size<<2)))&&(size!=0))
 				{
 					#ifndef __linux__
 					PRINTF("Enter the seed value\n\r>>");
@@ -154,7 +154,7 @@ if(ans == 'a' || ans =='A')
 					#endif
 
 					rand_num = data;
-					for(int s=0; s<=size; s++)
+					for(int s=0; s<size; s++)
 					{
 						rand_num = random_generator(rand_num);
 						read_num = *((uint32_t*)rd_address+s);
@@ -286,7 +286,7 @@ else if(ans=='o'||ans=='O')
 		if(((uint32_t*)offset_address>=mem_address && (uint32_t*)offset_address<(mem_address+num_words)) && ((offset_address-(uint64_t)mem_address)%4 ==0))//((uint32_t*)wr_address == (mem_address+i))) // checking if address is in the allocated and is the starting address of each 32 bit word
 			{
 
-				if((mem_address+num_words)> (uint32_t*)(offset_address+(size<<2)))
+				if(((mem_address+num_words)>=(uint32_t*)(offset_address+(size<<2))) && (size != 0))
 				{
 					#ifndef __linux__
 					PRINTF("Enter the seed value\n\r>>");
@@ -310,7 +310,7 @@ else if(ans=='o'||ans=='O')
 						clock_t start = clock();
 					#endif
 					rand_num = data;
-					for(int s=0; s<=size; s++)
+					for(int s=0; s<size; s++)
 					{
 						rand_num = random_generator(rand_num);
 						read_num = *((uint32_t*)offset_address+s);
@@ -397,7 +397,6 @@ else if(ans=='o'||ans=='O')
 					printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
 					#endif
 	}
-
 else if((ans !=('a'||'A')) && (ans !=('o'||'O'))) //if the input for selecting either address of offset is wrong then asking user to enter again
 	{
 		#ifndef __linux__
