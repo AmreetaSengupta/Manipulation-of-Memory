@@ -22,7 +22,7 @@ int write_pattern()
 uint64_t wr_address,offset_address;
 uint32_t data,size;
 int i,j;
-float period = (.047619);
+float period = (.020833);
 uint32_t count = 0;
 uint32_t rand_num;
 
@@ -188,11 +188,7 @@ if(ans == 'a' || ans =='A')
 				#endif	//computing the difference between start and end and displaying the time taken in seconds
 
 
-					#ifndef __linux__
-					PRINTF("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
-   					#else
-					printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
-					#endif
+					
 
 				}
 				else
@@ -219,6 +215,11 @@ if(ans == 'a' || ans =='A')
 			goto label1;
 		}
 	}
+					#ifndef __linux__
+					PRINTF("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
+   					#else
+					printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
+					#endif
 }
 else if(ans=='o'||ans=='O')
 	{
@@ -320,12 +321,7 @@ else if(ans=='o'||ans=='O')
 				#endif	//computing the difference between start and end and displaying the time taken in seconds
 
 
-					#ifndef __linux__
-					PRINTF("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
-   					#else
-					printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
-					#endif
-
+					
 				}
 				else
 				{
@@ -348,6 +344,13 @@ else if(ans=='o'||ans=='O')
 
 				goto label3;
 			}
+			
+					#ifndef __linux__
+					PRINTF("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
+   					#else
+					printf("\nEnter the function to be executed or Press Help for function information or Press Exit to Quit\n\r>>");
+					#endif
+			
 	}
 
 else if((ans !=('a'||'A')) && (ans !=('o'||'O'))) //if the input for selecting either address of offset is wrong then asking user to enter again
