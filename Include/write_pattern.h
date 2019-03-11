@@ -9,4 +9,6 @@
 #include "../Include/random_generator.h"
 
 
+
 int write_pattern();
+

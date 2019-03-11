@@ -5,9 +5,10 @@
 * @Tools used : GCC & GNU make
 * @author Amreeta Sengupta & Ridhi Shah
 ************************************************************************************/
-#include "../Include/allocate.h"
+
 #include "../Include/write_pattern.h"
 #include "../Include/random_generator.h"
 
 
 int verify_pattern();
+

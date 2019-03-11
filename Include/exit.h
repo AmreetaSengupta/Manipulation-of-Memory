@@ -4,4 +4,7 @@
 * @Tools used : GCC & GNU make
 * @authors Amreeta Sengupta & Ridhi Shah
 ************************************************************************************/
+#include "../Include/free.h"
+
 int Exit();
+

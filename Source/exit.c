@@ -6,12 +6,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../Include/exit.h"
-#include "../Include/free.h"
-#include "../Include/allocate.h"
+
+extern uint32_t *mem_address;
+extern uint32_t num_words;
+
 int Exit()
 {
 free(mem_address);
-printf("exiting...\nBye!!\n");
+mem_address = NULL;
+	#ifndef __linux__
+	PRINTF("exiting...\nBye!!\n\r");
+   	#else
+	printf("exiting...\nBye!!\n\r");
+	#endif
+
 exit(0);
 return 0;
 }
+

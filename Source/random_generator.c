@@ -15,3 +15,4 @@ uint32_t random_generator(uint32_t seed)
 	uint32_t x = (((seed*173)+197));
 	return x;
 }
+
