@@ -18,7 +18,7 @@ string is not case sensitive. This input is compared with the predefined string 
 matches then the allocate function is executed. In case allocation fails the user is asked to allocate again
 using the same commands.
 
-**--> Write:**
+### **--> Write:**
 
 • The Write function write hexadecimal value of the data entered by the user to a specified
 address. This function is invoked when the string ‘write’ is entered by the user. The string is not case
