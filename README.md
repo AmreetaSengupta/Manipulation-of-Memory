@@ -3,14 +3,14 @@ Code contains design of an interactive command-line utility to perform memory ma
 
 The following functions have been implemented:
 
-### **Help:**
+### Help:
 
 The help function displays a brief description of what each function in the utilty does. This function is
 invoked when the string ‘help’ is entered by the user. The string is not case sensitive. This input is
 compared with the predefine string in the lookup table and if it matches then the help function is
 executed.
 
-### **--> Allocate:**
+### **Allocate:**
 
 The Allocate function allocates 32 bit blocks of memory. The number of blocks to be allocated is
 specified by the user. This function is invoked when the string ‘allocate’ is entered by the user. The
