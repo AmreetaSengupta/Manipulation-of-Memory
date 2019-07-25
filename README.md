@@ -20,7 +20,7 @@ using the same commands.
 
 --> Write:
 
-The Write function write hexadecimal value of the data entered by the user to a specified
+• The Write function write hexadecimal value of the data entered by the user to a specified
 address. This function is invoked when the string ‘write’ is entered by the user. The string is not case
 sensitive. This input is compared with the predefined string in the lookup table and if it matches then the
 write function is executed.
@@ -41,7 +41,7 @@ and user is asked to enter again.
 
 --> Display:
 
-The Display function display hexadecimal data written by the user from a specified address.
+• The Display function display hexadecimal data written by the user from a specified address.
 This function is invoked when the string ‘display’ is entered by the user. The string is not case sensitive.
 This input is compared with the predefined string in the lookup table and if it matches then the write
 function is executed.
@@ -64,7 +64,7 @@ and user is asked to enter again.
 
 --> Invert:
 
-The Invert function inverts the hexadecimal data present at the address by the user.the time taken to
+• The Invert function inverts the hexadecimal data present at the address by the user.the time taken to
 execute this function is also printed This function is invoked when the string ‘invert’ is entered by the
 user. The string is not case sensitive. This input is compared with the predefined string in the lookup
 table and if it matches then the write function is executed.
@@ -88,7 +88,7 @@ execute this function is also printed.
 
 --> Write Pattern:
 
-The write pattern function is used to write pseudo random numbers to the number of blocks of
+• The write pattern function is used to write pseudo random numbers to the number of blocks of
 addresses specified by the user. the time taken to execute this function is also printed This function is
 invoked when the string ‘write_pattern’ is entered by the user. The string is not case sensitive. This input 
 is compared with the predefined string in the lookup table and if it matches then the write function is
@@ -116,7 +116,7 @@ from the address that he specified and is within the range of the allocated rang
 
 --> Verify Pattern:
 
-The verify pattern function is used to verify the pseudo random numbers written by the user. the time
+• The verify pattern function is used to verify the pseudo random numbers written by the user. the time
 taken to execute this function is also printed This function is invoked when the string ‘verify_pattern’ is
 entered by the user. The string is not case sensitive. This input is compared with the predefined string in
 the lookup table and if it matches then the write function is executed.
