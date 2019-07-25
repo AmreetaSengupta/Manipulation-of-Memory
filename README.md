@@ -10,7 +10,7 @@ invoked when the string ‘help’ is entered by the user. The string is not cas
 compared with the predefine string in the lookup table and if it matches then the help function is
 executed.
 
-**--> Allocate:**
+### **--> Allocate:**
 
 The Allocate function allocates 32 bit blocks of memory. The number of blocks to be allocated is
 specified by the user. This function is invoked when the string ‘allocate’ is entered by the user. The
