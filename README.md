@@ -4,12 +4,14 @@ Code contains design of an interactive command-line utility to perform memory ma
 The following functions have been implemented:
 
 --> Help:
+
 The help function displays a brief description of what each function in the utilty does. This function is
 invoked when the string ‘help’ is entered by the user. The string is not case sensitive. This input is
 compared with the predefine string in the lookup table and if it matches then the help function is
 executed.
 
 --> Allocate:
+
 The Allocate function allocates 32 bit blocks of memory. The number of blocks to be allocated is
 specified by the user. This function is invoked when the string ‘allocate’ is entered by the user. The
 string is not case sensitive. This input is compared with the predefined string in the lookup table and if it
@@ -17,6 +19,7 @@ matches then the allocate function is executed. In case allocation fails the use
 using the same commands.
 
 --> Write:
+
 The Write function write hexadecimal value of the data entered by the user to a specified
 address. This function is invoked when the string ‘write’ is entered by the user. The string is not case
 sensitive. This input is compared with the predefined string in the lookup table and if it matches then the
@@ -37,6 +40,7 @@ has allocated.
 and user is asked to enter again.
 
 --> Display:
+
 The Display function display hexadecimal data written by the user from a specified address.
 This function is invoked when the string ‘display’ is entered by the user. The string is not case sensitive.
 This input is compared with the predefined string in the lookup table and if it matches then the write
@@ -59,6 +63,7 @@ and user is asked to enter again.
 • The data is the displayed on the screen.
 
 --> Invert:
+
 The Invert function inverts the hexadecimal data present at the address by the user.the time taken to
 execute this function is also printed This function is invoked when the string ‘invert’ is entered by the
 user. The string is not case sensitive. This input is compared with the predefined string in the lookup
@@ -82,6 +87,7 @@ and user is asked to enter again.
 execute this function is also printed.
 
 --> Write Pattern:
+
 The write pattern function is used to write pseudo random numbers to the number of blocks of
 addresses specified by the user. the time taken to execute this function is also printed This function is
 invoked when the string ‘write_pattern’ is entered by the user. The string is not case sensitive. This input 
@@ -109,6 +115,7 @@ from the address that he specified and is within the range of the allocated rang
 • A seed value is then take from the user which is used to generate the random number.
 
 --> Verify Pattern:
+
 The verify pattern function is used to verify the pseudo random numbers written by the user. the time
 taken to execute this function is also printed This function is invoked when the string ‘verify_pattern’ is
 entered by the user. The string is not case sensitive. This input is compared with the predefined string in
@@ -136,8 +143,12 @@ that he specified and is within the range of the allocated range.
 
 • It is then compared and printed if it is successfully matching or if it has descripencies.
 
---> Free: This function releases the allocated memory. This function is invoked when the string ‘free’ is
+--> Free: 
+
+This function releases the allocated memory. This function is invoked when the string ‘free’ is
 entered by the user. The string is not case sensitive.
 
---> Exit: This function is used from exiting the utility. This function is invoked when the string ‘exit’ is
+--> Exit: 
+
+This function is used from exiting the utility. This function is invoked when the string ‘exit’ is
 entered by the user. The string is not case sensitive.
