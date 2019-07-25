@@ -3,7 +3,7 @@ Code contains design of an interactive command-line utility to perform memory ma
 
 The following functions have been implemented:
 
-## **Help:**
+#### **Help:**
 
 The help function displays a brief description of what each function in the utilty does. This function is
 invoked when the string ‘help’ is entered by the user. The string is not case sensitive. This input is
